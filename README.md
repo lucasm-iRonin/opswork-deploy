@@ -39,17 +39,14 @@ source bin/activate
 
 ## Examples
 
-    easy_deploy.py deploy --application=myapp rolling --stack-name=teststack --layer-name=apiserver --comment="Rolling deployment to all apiservers" --timeout=300
-
-    easy_deploy.py deploy --application=myapp instances --stack-name=teststack --hosts=host1,host2 --comment="Deploy to host1 and host2"
-
-    easy_deploy.py --profile=dev deploy --application=myapp all --stack-name=teststack --layer-name=appserver --comment="Deploy to all servers"
-
-    easy_deploy.py update --no-allow-reboot rolling --stack-name=teststack --layer-name=apiserver --comment="Rolling patch to all apiservers
-
-    easy_deploy.py update --allow-reboot --amazon-linux-release=2014.09 instances --stack-name=teststack --hosts=host1,host2 --comment="Updating host1 and host2 to latest Amazon Linux"
-
-    easy_deploy.py update --allow-reboot all --stack-name=teststack --layer-name=appserver --comment="Applying kernel patches to all servers"
+```shell
+./easy_deploy.py deploy --application=myapp rolling --stack-name=teststack --layer-name=apiserver --comment="Rolling deployment to all apiservers" --timeout=300
+./easy_deploy.py deploy --application=myapp instances --stack-name=teststack --hosts=host1,host2 --comment="Deploy to host1 and host2"
+./easy_deploy.py --profile=dev deploy --application=myapp all --stack-name=teststack --layer-name=appserver --comment="Deploy to all servers"
+./easy_deploy.py update --no-allow-reboot rolling --stack-name=teststack --layer-name=apiserver --comment="Rolling patch to all apiservers
+./easy_deploy.py update --allow-reboot --amazon-linux-release=2014.09 instances --stack-name=teststack --hosts=host1,host2 --comment="Updating host1 and host2 to latest Amazon Linux"
+./easy_deploy.py update --allow-reboot all --stack-name=teststack --layer-name=appserver --comment="Applying kernel patches to all servers"
+```
 
 ## Configuration
 
